@@ -1,5 +1,11 @@
 # @thepwagner-org/meow-npm
 
+## 0.0.2
+
+### Patch Changes
+
+- c44ead8: yarn changeset
+
 ## 0.0.9
 
 ### Patch Changes
