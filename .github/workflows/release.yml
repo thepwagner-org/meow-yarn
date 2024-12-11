@@ -1,0 +1,24 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    name: Release
+    uses: Shopify/github-workflows/.github/workflows/js-release-changeset.yml@js-release-changeset
+    with:
+      node-version: '20'
+      package-manager: 'yarn'
+      release-command: 'yarn run release'
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,32 @@
+{
+  "name": "@thepwagner-org/meow-yarn",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.1",
+  "description": "Determines if a string is a meow.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thepwagner-org/meow-yarn.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "release": "yarn run build && yarn pack && changeset publish",
+    "build": "tsc"
+  },
+  "author": "1559510+thepwagner@users.noreply.github.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.10",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.2"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
